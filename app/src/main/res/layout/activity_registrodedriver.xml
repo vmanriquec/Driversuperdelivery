@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrodedriver">
+
+
+    <TextView
+        android:id="@+id/cabecera"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fondotarjeta"
+
+        android:gravity="center_vertical"
+        android:text="Completa estos datos"
+        android:textAlignment="center"
+        android:textColor="@color/colortres"
+        android:textSize="18sp"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/user"
+        android:layout_width="68dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/cabecera"
+        android:layout_marginTop="44dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/src_files_profile" />
+
+    <EditText
+        android:id="@+id/nombrecompleto"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/cabecera"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+
+
+        android:layout_toRightOf="@+id/user"
+        android:gravity="center_vertical"
+        android:hint="Nombres completos"
+        android:textColorHint="@color/accent"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/apellidos"
+        android:layout_width="332dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/nombrecompleto"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+
+        android:hint="Apellidos completos"
+        android:textColorHint="@color/accent"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/correo"
+        android:layout_width="68dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="65dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/src_files_name" />
+
+    <EditText
+        android:id="@+id/dni"
+        android:layout_width="338dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/apellidos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@+id/correo"
+        android:gravity="center_vertical"
+
+        android:hint="Dni"
+        android:inputType="number"
+        android:textColorHint="@color/accent"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/tele"
+        android:layout_width="68dp"
+        android:layout_height="39dp"
+
+        android:layout_below="@+id/correo"
+        android:layout_marginTop="51dp"
+        app:srcCompat="@drawable/src_files_mobile" />
+
+    <EditText
+        android:id="@+id/telefono"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/dni"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tele"
+        android:gravity="center_vertical"
+        android:hint="Telefono  verificado"
+        android:inputType="number"
+        android:textColorHint="@color/accent"
+        android:textSize="18sp" />
+
+
+    <ImageView
+        android:id="@+id/con"
+        android:layout_width="68dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/tele"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/src_files_lock" />
+
+    <EditText
+        android:id="@+id/contra"
+        android:layout_width="339dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/telefono"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_toRightOf="@+id/con"
+        android:gravity="center_vertical"
+
+        android:hint="Contraseña"
+        android:textColorHint="@color/accent"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/recontra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contra"
+
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="70dp"
+
+        android:layout_marginTop="5dp"
+        android:hint="Reescribe tu Contraseña"
+        android:paddingLeft="50dp"
+        android:textColorHint="@color/accent" />
+
+    <ImageView
+        android:id="@+id/mapaima"
+        android:layout_width="78dp"
+        android:layout_height="39dp"
+
+        android:layout_below="@+id/con"
+
+android:layout_marginTop="70dp"
+        app:srcCompat="@drawable/src_files_address" />
+
+
+    <EditText
+        android:id="@+id/dire"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/recontra"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/con"
+        android:gravity="center_vertical"
+
+        android:hint="Tu direccion Verificada"
+        android:textColorHint="@color/accent"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="68dp"
+        android:layout_height="49dp"
+
+        android:layout_below="@+id/mapaima"
+
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/src_files_emptyorder" />
+
+
+    <EditText
+        android:id="@+id/placa"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/dire"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/con"
+        android:gravity="center_vertical"
+        android:hint="identificacion de tu unidad"
+        android:textColorHint="@color/accent"
+        android:textSize="18sp" />
+
+
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/placa"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/registrousuario"
+        >
+
+        <ImageView
+            android:id="@+id/fotodriver"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            app:srcCompat="@drawable/moto" />
+
+        <Button
+            android:id="@+id/subirfoto"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/fotodriver"
+            android:background="@drawable/fondotarjeta"
+            android:text="foto"
+            android:textColor="@color/colortres" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/registrousuario"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/fondotarjeta"
+        android:text="Listo"
+        android:textColor="@color/colortres"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>

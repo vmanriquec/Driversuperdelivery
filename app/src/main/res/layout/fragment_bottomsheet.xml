@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/fondotarjeta"
+
+        >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="93dp"
+            app:srcCompat="@drawable/logoimagen"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/cabecerashet"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_height="41dp"
+            android:layout_below="@+id/cuerposhet"
+        android:layout_marginLeft="10dp"
+            android:layout_marginTop="22dp"
+            android:textSize="16dp"
+            android:layout_toRightOf="@+id/imageView4"
+            android:text="TextView"
+            android:textColor="@color/colortres" />
+
+        <TextView
+            android:id="@+id/cuerposhet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageView4"
+            android:text="Hola "
+            android:textColor="@color/colortres"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nombreusuarioshet"
+            android:layout_toRightOf="@+id/cuerposhet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="TextView"
+            android:textColor="@color/colortres" />
+
+    </RelativeLayout>
+</RelativeLayout>
