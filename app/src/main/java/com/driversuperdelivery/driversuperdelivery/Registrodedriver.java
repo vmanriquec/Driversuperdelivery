@@ -143,7 +143,7 @@ public class Registrodedriver extends AppCompatActivity {
                                 result.addOnSuccessListener(new OnSuccessListener<Uri>() {
                                     @Override
                                     public void onSuccess(Uri uri) {
-
+                                        nombrefoto= uri.toString();
                                         Driver subedriver = new Driver(1, nombres.getText().toString(), apellidos.getText().toString(), dni.getText().toString()
                                                 , telefono.getText().toString(), contrasena.getText().toString()
                                                 , direccion.getText().toString(), unidad.getText().toString(), nombrefoto, "idfire", "habilitado", "lati", "longi", "referencia", nombrefoto);
@@ -198,6 +198,8 @@ public class Registrodedriver extends AppCompatActivity {
                                     }
                                 } else {
                                     dispatchTakePictureIntent();
+
+
                                 }
                             }
 

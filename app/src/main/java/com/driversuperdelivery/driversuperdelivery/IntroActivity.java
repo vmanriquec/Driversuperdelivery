@@ -83,7 +83,7 @@ public class IntroActivity extends MaterialIntroActivity {
         super.onFinish();
         prefs = getApplication().getSharedPreferences(FileName, Context.MODE_PRIVATE);
 
-        String nombre = prefs.getString("nombreusuariof", "");
+        String nombre = prefs.getString("dnidriver", "");
         String estadopedido = prefs.getString("estadopedido", "");
 
                 if (nombre.equals("")){
@@ -93,8 +93,8 @@ public class IntroActivity extends MaterialIntroActivity {
                     startActivity(i);
                 }
                 else{
-                   // Intent i= new Intent(IntroActivity.this,Registrodedriver.class);
-                    //startActivity(i);
+                   Intent i= new Intent(IntroActivity.this,MainActivity.class);
+                   startActivity(i);
                 }
             }
 
