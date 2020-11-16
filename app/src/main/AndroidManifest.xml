@@ -45,6 +45,9 @@
             android:name=".Mostrarmapa"
             android:label="@string/title_activity_mostrarmapa" />
         <activity
+            android:name=".Map"
+            android:label="@string/title_activity_mostrarmapa" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_mostrarmapa" />
 

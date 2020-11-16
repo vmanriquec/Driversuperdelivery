@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                     pb.add(pedidoRealmFirebase);
                 }
 
-                String idempresa=prefs.getString("idempresa","");
+                String idempresa="91";
 
                 new traerpedidos().execute(idempresa);
                 quesemuestra.setText("Pedidos por entregar en la semana");

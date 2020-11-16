@@ -51,7 +51,6 @@
                 android:shadowColor="@color/fondito"
                 android:text="Rechazado"
                 android:textColor="@color/colorPrimary"
-                android:textColorHighlight="@color/fbutton_color_wisteria"
                 android:textColorHint="@color/abc_search_url_text_normal"
                 android:textColorLink="@color/coloramarilloprincipal" />
 
