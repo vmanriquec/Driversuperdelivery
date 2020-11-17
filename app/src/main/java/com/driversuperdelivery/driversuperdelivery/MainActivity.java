@@ -741,7 +741,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... params) {
 
             try {
-                url = new URL("https://sodapop.pe/sugest/traertodoslospedidosdelivery.php");
+                url = new URL("https://sodapop.pe/sugest/traertodoslospedidosdeliverydriver.php");
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

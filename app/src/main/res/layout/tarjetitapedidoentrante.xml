@@ -37,16 +37,23 @@
 
                 <TextView
                     android:id="@+id/fechitapedido"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@color/trans"
                     android:text="TextView"
                     android:textSize="16sp" />
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="40dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/chillixhdpi" />
+
                 <TextView
                     android:id="@+id/estadopeido"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_weight="1"
