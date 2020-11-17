@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -18,6 +19,7 @@ import android.widget.ToggleButton;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.driversuperdelivery.driversuperdelivery.CircleTransform;
 import com.driversuperdelivery.driversuperdelivery.MainActivity;
 
 import com.driversuperdelivery.driversuperdelivery.Map;
@@ -31,6 +33,7 @@ import com.driversuperdelivery.driversuperdelivery.modelos.CremaRealmFirebase;
 import com.driversuperdelivery.driversuperdelivery.modelos.DetallepedidoRealmFirebase;
 import com.driversuperdelivery.driversuperdelivery.modelos.Detallepedidorealm;
 import com.driversuperdelivery.driversuperdelivery.modelos.PedidoRealmFirebase;
+import com.squareup.picasso.Picasso;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -47,6 +50,7 @@ import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import jp.wasabeef.picasso.transformations.CropSquareTransformation;
 
 public class Adaptadorrecibepedidos extends RecyclerView.Adapter<Adaptadorrecibepedidos.AdaptadorViewHolder>  {
     private MainActivity mainContext;
@@ -73,11 +77,13 @@ public class Adaptadorrecibepedidos extends RecyclerView.Adapter<Adaptadorrecibe
         protected TextView nombre;
         protected TextView direccion,referencias,cuantopaga,vuelto,totalapagar1,idpedido,fechitapedido,estadopedido;
 protected ToggleButton togle;
-        protected TextView telefono,txtporentregar;
+        protected TextView telefono,txtporentregar,nombreempresita;
+        protected ImageView local;
         protected Button wasap,rechazarpedido,muestrapedido,mapau22,ordenentregada;
 
         public AdaptadorViewHolder(View v){
             super(v);
+            this.local=(ImageView)v.findViewById(R.id.local);
             this.nombre=(TextView) v.findViewById(R.id.nombrecliente);
             this.direccion=(TextView) v.findViewById(R.id.direccion);
             this.totalapagar1=(TextView) v.findViewById(R.id.totalapagar1);
@@ -89,6 +95,7 @@ protected ToggleButton togle;
             this.wasap=(Button) v.findViewById(R.id.watsapp);
             this.rechazarpedido=(Button) v.findViewById(R.id.rechazarorden);
             this.fechitapedido=(TextView) v.findViewById(R.id.fechitapedido);
+
 this.muestrapedido=(Button)v.findViewById(R.id.muestrapedido);
             this.mapau22=(Button)v.findViewById(R.id.mapau22);
             this.ordenentregada=(Button)v.findViewById(R.id.ordenentragadab);
@@ -119,6 +126,10 @@ viewHolder.nombre.setText(String.valueOf(item.getNombreusuario()));
         viewHolder.totalapagar1.setText(String.valueOf(item.getTotalpedido()));
         viewHolder.telefono.setText(String.valueOf(item.getTelefono()));
 viewHolder.fechitapedido.setText(String.valueOf(item.getFechapedido()));
+
+
+
+        Picasso.get().load(String.valueOf(item.getIdfacebook())).transform(new CropSquareTransformation()).resize(400, 400).into(viewHolder.local);
 
 
 
@@ -340,7 +351,7 @@ viewHolder.rechazarpedido.setOnClickListener(new View.OnClickListener() {
 
                 try {
                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                  intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+viewHolder.telefono.getText().toString()+"&text="+"Hola, acabamos de reibir tu pedido en breve podras recibirlo, Gracias por tu preferencia :)"));
+                  intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+viewHolder.telefono.getText().toString()+"&text="+"Hola, soy el driver que lleva tu pedido gracias por confiar en nosotros"));
                  mainContext.startActivity(intent);
                 }catch (Exception e){
                   e.printStackTrace();
